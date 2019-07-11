@@ -102,6 +102,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+    {
+        'NAME': 'authorization.validators.CheckPassForContainsNeededPassword',
+        'OPTIONS': {
+            'username': 'test6',
+            'password': 'vetal20051996'
+        }
+    },
 ]
 
 
@@ -128,3 +135,5 @@ STATIC_URL = '/static/'
 # Login/LogOut links
 LOGIN_REDIRECT_URL = reverse_lazy('csv_worker:home')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
+
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
