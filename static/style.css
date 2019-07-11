@@ -25,3 +25,15 @@ body > .container {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+#labelLogin{
+    margin-bottom: 40px;
+}
+
+#labelSignup{
+    margin-bottom: 40px;
+}
+
+.errorlist{
+    list-style: none;
+}

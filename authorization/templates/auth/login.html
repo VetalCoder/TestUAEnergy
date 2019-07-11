@@ -1,12 +1,43 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Login </h1>
-    <form action="" method="post">
+    <h1 class="text-center" id="labelLogin">Login</h1>
+    <form action=""  method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
+
+        {% if form.errors %}
+            {% for error in form.non_field_errors %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{ error }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            {% endfor %}
+        {% endif %}
+
+        {% for elem in form %}
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-4 col-form-label text-center">{{ elem.label }}</label>
+                <div class="col-sm-8">
+                    {{ elem }}
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="form-group row">
+            <div class="col-sm-4 text-center">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </div>
     </form>
 
+{% endblock %}
 
+
+{% block script %}
+    <script>
+        document.getElementById("id_username").classList.add('form-control');
+        document.getElementById("id_password").classList.add('form-control');
+    </script>
 {% endblock %}
