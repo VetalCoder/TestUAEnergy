@@ -16,7 +16,7 @@
         <tbody>
             <tr>
                 {% for value in table1_data.values %}
-                    <th>{{ value|zeros_to_nines }}</th>
+                    <td>{{ value|zeros_to_nines }}</td>
                 {% endfor %}
             </tr>
         </tbody>
@@ -34,7 +34,7 @@
         <tbody>
             <tr>
                 {% for value in table2_data.values %}
-                    <th>{{ value|only_latin_symbols }}</th>
+                    <td>{{ value|only_latin_symbols }}</td>
                 {% endfor %}
             </tr>
         </tbody>
@@ -52,7 +52,7 @@
         <tbody>
             <tr>
                 {% for value in table3_data.values %}
-                    <th>{{ value }}</th>
+                    <td>{{ value }}</td>
                 {% endfor %}
             </tr>
         </tbody>
