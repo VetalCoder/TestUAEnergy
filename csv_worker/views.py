@@ -7,6 +7,8 @@ from .forms import InputCSV
 from . import dbhelper
 import json
 from io import StringIO
+import random
+import collections
 
 import csv
 
@@ -38,4 +40,13 @@ class ShowTablesView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        for index, (name, data) in enumerate(dbhelper.get_data().items(), 1):
+            context[f'table{index}_name'] = name
+            context[f'table{index}_data'] = data
+
+        context['table3_name'] = 'Random unique symbols'
+        unique_symbols = list(map(chr, random.sample(range(0xd7ff), 16)))  # to 0x10ffff, if needed
+        context['table3_data'] = collections.OrderedDict(
+            [(f'Sym {index}', value) for index, value in zip(range(1, 17), unique_symbols)]
+        )
         return context

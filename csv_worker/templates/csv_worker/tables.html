@@ -1,5 +1,60 @@
 {% extends 'base.html' %}
+{% load filters_for_tables %}
 
 {% block content %}
-    <h1>Tables</h1>
+    <h1 class="text-center">Tables</h1>
+
+    <h5>Table for variable '{{ table1_name }}':</h5>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                {% for elem in table1_data %}
+                    <th>{{ elem }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for value in table1_data.values %}
+                    <th>{{ value|zeros_to_nines }}</th>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+
+    <h5>Table for variable '{{ table2_name }}':</h5>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                {% for elem in table2_data %}
+                    <th>{{ elem }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for value in table2_data.values %}
+                    <th>{{ value|only_latin_symbols }}</th>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+
+    <h5>Table with {{ table3_name|lower }}:</h5>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                {% for elem in table3_data %}
+                    <th>{{ elem }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for value in table3_data.values %}
+                    <th>{{ value }}</th>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
 {% endblock %}
