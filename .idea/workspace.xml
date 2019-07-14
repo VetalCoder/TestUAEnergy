@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66ccb86a-f3f5-4653-89ab-5aeb0fffa988" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TestUAEnergy/proj_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestUAEnergy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestUAEnergy/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestUAEnergy/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestUAEnergy/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/templates/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/templates/auth/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/templates/auth/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/authorization/validators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_worker/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/csv_worker/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_worker/templates/csv_worker/load_csv.html" beforeDir="false" afterPath="$PROJECT_DIR$/csv_worker/templates/csv_worker/load_csv.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csv_worker/templates/csv_worker/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/csv_worker/templates/csv_worker/tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_worker/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/csv_worker/validators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_worker/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/csv_worker/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +53,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestUAEnergy/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-22">
@@ -73,6 +61,15 @@
               <folding>
                 <element signature="e#311#320#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/csv_worker/templates/csv_worker/tables.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="48" column="60" lean-forward="true" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -167,7 +164,6 @@
         <option value="$PROJECT_DIR$/authorization/templates/auth/signup.html" />
         <option value="$PROJECT_DIR$/TestUAEnergy/urls.py" />
         <option value="$PROJECT_DIR$/locales/ua/LC_MESSAGES/django.po" />
-        <option value="$PROJECT_DIR$/csv_worker/templates/csv_worker/tables.html" />
         <option value="$PROJECT_DIR$/locales/en/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/locales/uk/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/csv_worker/forms.py" />
@@ -177,10 +173,11 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/authorization/forms.py" />
         <option value="$PROJECT_DIR$/TestUAEnergy/settings.py" />
+        <option value="$PROJECT_DIR$/csv_worker/templates/csv_worker/tables.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="462" />
     <option name="y" value="-13" />
     <option name="width" value="1374" />
@@ -295,12 +292,12 @@
       <option name="presentableId" value="Default" />
       <updated>1562792533011</updated>
       <workItem from="1562792540746" duration="44869000" />
-      <workItem from="1563010465761" duration="47292000" />
+      <workItem from="1563010465761" duration="48789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92161000" />
+    <option name="totallyTimeSpent" value="93658000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,10 +313,10 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18835099" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18835099" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" weight="0.3277311" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.46481177" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.21276596" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="manage.py@TestUAEnergy" order="4" weight="0.3289689" />
@@ -328,7 +325,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.36988544" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.36988544" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -592,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csv_worker/templates/csv_worker/tables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/locales/en/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-446">
@@ -692,6 +682,13 @@
           <folding>
             <element signature="e#311#320#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/csv_worker/templates/csv_worker/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="48" column="60" lean-forward="true" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
         </state>
       </provider>
     </entry>
