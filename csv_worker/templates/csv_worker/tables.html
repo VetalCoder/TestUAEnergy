@@ -9,7 +9,7 @@
         <h4 class="text-center">{{ table_does_not_exists }}</h4>
     {% else %}
         <h5>{% trans 'Table for variable' %} '{{ table1_name }}':</h5>
-        <table class="table table-bordered table-success table-hover">
+        <table class="table table-bordered table-success">
             <thead>
                 <tr>
                     {% for elem in table1_data %}
@@ -46,7 +46,7 @@
     {% endif %}
 
     <h5>{% trans 'Table with' %} {{ table3_name|lower }}:</h5>
-    <table class="table table-bordered table-info table-striped">
+    <table class="table table-bordered table-danger table-striped">
         <thead>
             <tr>
                 {% for elem in table3_data %}
