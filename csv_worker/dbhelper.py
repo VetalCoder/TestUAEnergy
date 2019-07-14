@@ -1,6 +1,10 @@
-from django.db import connection
+from django.db import connection, ProgrammingError
 from django.conf import settings
 import collections
+
+
+class TableDoesNotExists(Exception):
+    pass
 
 
 # data_csv -> dict {name: data (json)}
@@ -40,11 +44,14 @@ def drop_table(table=settings.TABLE_NAME_FOR_VARIABLES):
 def get_data(table=settings.TABLE_NAME_FOR_VARIABLES, count=2):
     with connection.cursor() as cursor:
         sql_row = f"select name, data from {table} limit %s"
-        cursor.execute(sql_row, [count])
+
+        try:
+            cursor.execute(sql_row, [count])
+        except ProgrammingError:
+            raise TableDoesNotExists
 
         result_dict = collections.OrderedDict()
         for name, data in cursor.fetchall():
             result_dict[name] = data
 
         return result_dict
-

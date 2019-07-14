@@ -147,7 +147,7 @@ STATICFILES_DIRS = [
 ]
 # Login/LogOut links
 LOGIN_REDIRECT_URL = reverse_lazy('csv_worker:home')
-LOGOUT_REDIRECT_URL = reverse_lazy('home')
+LOGOUT_REDIRECT_URL = reverse_lazy('authorization:home')
 
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
 

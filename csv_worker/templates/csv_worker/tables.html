@@ -4,41 +4,45 @@
 {% block content %}
     <h1 class="text-center">Tables</h1>
 
-    <h5>Table for variable '{{ table1_name }}':</h5>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                {% for elem in table1_data %}
-                    <th>{{ elem }}</th>
-                {% endfor %}
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                {% for value in table1_data.values %}
-                    <td>{{ value|zeros_to_nines }}</td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+    {% if table_does_not_exists %}
+        <h4 class="text-center">{{ table_does_not_exists }}</h4>
+    {% else %}
+        <h5>Table for variable '{{ table1_name }}':</h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    {% for elem in table1_data %}
+                        <th>{{ elem }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for value in table1_data.values %}
+                        <td>{{ value|zeros_to_nines }}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
 
-    <h5>Table for variable '{{ table2_name }}':</h5>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                {% for elem in table2_data %}
-                    <th>{{ elem }}</th>
-                {% endfor %}
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                {% for value in table2_data.values %}
-                    <td>{{ value|only_latin_symbols }}</td>
-                {% endfor %}
-            </tr>
-        </tbody>
-    </table>
+        <h5>Table for variable '{{ table2_name }}':</h5>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    {% for elem in table2_data %}
+                        <th>{{ elem }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for value in table2_data.values %}
+                        <td>{{ value|only_latin_symbols }}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    {% endif %}
 
     <h5>Table with {{ table3_name|lower }}:</h5>
     <table class="table table-bordered">
@@ -57,4 +61,8 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="text-right">
+        <a href={% url 'csv_worker:home' %}>Go back...</a>
+    </div>
 {% endblock %}
