@@ -2,6 +2,8 @@ from django.shortcuts import redirect
 from django.views.generic.edit import FormView
 from django.views.generic.base import TemplateView
 
+from django.utils.translation import gettext as _
+
 from .forms import InputCSV
 from . import dbhelper
 import json
@@ -52,9 +54,9 @@ class ShowTablesView(TemplateView):
                 context[f'table{index}_name'] = name
                 context[f'table{index}_data'] = data
         except dbhelper.TableDoesNotExists:
-            context['table_does_not_exists'] = 'No one CSV file loaded before...'
+            context['table_does_not_exists'] = _('No one CSV file loaded before...')
 
-        context['table3_name'] = 'Random unique symbols'
+        context['table3_name'] = _('Random unique symbols')
         unique_symbols = list(map(chr, random.sample(range(0xd7ff), 16)))  # to 0x10ffff, if needed
         context['table3_data'] = collections.OrderedDict(
             [(f'Sym {index}', value) for index, value in zip(range(1, 17), unique_symbols)]

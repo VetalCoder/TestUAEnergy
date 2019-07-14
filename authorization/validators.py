@@ -1,3 +1,6 @@
+from django.utils.translation import gettext as _
+
+
 class CheckPassForContainsNeededPassword:
     def __init__(self, username=None, password=None):
         self.username = username
@@ -9,4 +12,4 @@ class CheckPassForContainsNeededPassword:
             user.save()
 
     def get_help_text(self):
-        return f"Password in user '{self.username}' broken..."
+        return _("Password in user '{}' broken...").format(self.username)

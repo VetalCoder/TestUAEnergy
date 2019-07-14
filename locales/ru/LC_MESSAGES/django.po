@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-14 16:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: TestUAEnergy/settings.py:162 templates/base.html:39
+msgid "Ukrainian"
+msgstr "Украинский"
+
+#: TestUAEnergy/settings.py:163 templates/base.html:35
+msgid "English"
+msgstr "Английский"
+
+#: TestUAEnergy/settings.py:164 templates/base.html:37
+msgid "Russian"
+msgstr "Русский"
+
+#: authorization/forms.py:9
+msgid "Access denied"
+msgstr "Доступ запрещён"
+
+#: authorization/forms.py:11
+msgid "You can't login with this account."
+msgstr "Вы не можете произвести аутентификацию с этого аккаунта."
+
+#: authorization/templates/auth/login.html:5
+#: authorization/templates/auth/login.html:31 templates/base.html:49
+msgid "Login"
+msgstr "Войти"
+
+#: authorization/templates/auth/signup.html:5
+#: authorization/templates/auth/signup.html:29
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: authorization/validators.py:15
+msgid "Password in user '{}' broken..."
+msgstr "Пароль пользователя '{}' не совпадает с нужным..."
+
+#: csv_worker/forms.py:9
+msgid "Upload CSV file here..."
+msgstr "Загрузите файл CSV здесь..."
+
+#: csv_worker/templates/csv_worker/load_csv.html:5
+msgid "Hello"
+msgstr "Привет"
+
+#: csv_worker/templates/csv_worker/load_csv.html:16
+msgid "Upload"
+msgstr "Загрузить"
+
+#: csv_worker/templates/csv_worker/load_csv.html:21
+msgid "Or go to tables..."
+msgstr "Или перейти к таблицам..."
+
+#: csv_worker/templates/csv_worker/tables.html:6
+msgid "Tables"
+msgstr "Таблицы"
+
+#: csv_worker/templates/csv_worker/tables.html:11
+#: csv_worker/templates/csv_worker/tables.html:29
+msgid "Table for variable"
+msgstr "Таблица для переменной"
+
+#: csv_worker/templates/csv_worker/tables.html:48
+msgid "Table with"
+msgstr "Таблица содержащая"
+
+#: csv_worker/templates/csv_worker/tables.html:67
+msgid "Go back..."
+msgstr "Назад..."
+
+#: csv_worker/validators.py:7
+msgid "This is not CSV file. CSV file must contains '.csv' extension."
+msgstr "Это не файл СSV. Он должен содержать расширение '.csv'."
+
+#: csv_worker/validators.py:12
+msgid "File size is too big. Input file less that 10 MB."
+msgstr "Размер файла слишком большой. Загрузите файл меньше чем 10 мегабайт."
+
+#: csv_worker/views.py:57
+msgid "No one CSV file loaded before..."
+msgstr "Ни одного файла CSV небыло загружено ранее..."
+
+#: csv_worker/views.py:59
+msgid "Random unique symbols"
+msgstr "Рандомные уникальные символы"
+
+#: templates/base.html:20
+msgid "My Site :)"
+msgstr "Мой Сайт :)"
+
+#: templates/base.html:31
+msgid "Language"
+msgstr "Язык"
+
+#: templates/base.html:46
+msgid "Sign Up"
+msgstr "Регистрация"
+
+#: templates/base.html:53
+msgid "Logout"
+msgstr "Выйти"
+
+#: templates/base.html:63
+msgid "Welcome! Please Login or Signup to continue..."
+msgstr ""
+"Добро пожаловать! Пожалуйста аутентифицируйтесь или пройдите регистрацию для "
+"продолжения..."
+
+#: templates/base.html:69
+msgid "Created by Lysenko Vitaliy. (2019)"
+msgstr "Создано Лысенком Виталием. (2019)"

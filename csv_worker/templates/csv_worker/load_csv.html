@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block content %}
-    <h1>Hello {{ user.username }}!</h1>
-    <form enctype="multipart/form-data" method="post" action="">
+    <h1>{% trans 'Hello' %}, {{ user.username }}!</h1>
+    <form enctype="multipart/form-data" method="post" action="" lang="en">
         {% csrf_token %}
 
         <div class="form-group text-center">
@@ -12,12 +13,12 @@
 
         <div class="form-group row">
             <div class="col-6 offset-3 text-center">
-                <button type="submit" class="btn btn-primary">Upload</button>
+                <button type="submit" class="btn btn-primary">{% trans 'Upload' %}</button>
             </div>
         </div>
     </form>
     <div class="text-right">
-        <a href={% url 'csv_worker:view_csv' %}>Or go to tables...</a>
+        <a href={% url 'csv_worker:view_csv' %}>{% trans 'Or go to tables...' %}</a>
     </div>
 
 {% endblock %}

@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% load filters_for_tables %}
+{% load i18n %}
 
 {% block content %}
-    <h1 class="text-center">Tables</h1>
+    <h1 class="text-center">{% trans 'Tables' %}</h1>
 
     {% if table_does_not_exists %}
         <h4 class="text-center">{{ table_does_not_exists }}</h4>
     {% else %}
-        <h5>Table for variable '{{ table1_name }}':</h5>
+        <h5>{% trans 'Table for variable' %} '{{ table1_name }}':</h5>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -25,7 +26,7 @@
             </tbody>
         </table>
 
-        <h5>Table for variable '{{ table2_name }}':</h5>
+        <h5>{% trans 'Table for variable' %} '{{ table2_name }}':</h5>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -44,7 +45,7 @@
         </table>
     {% endif %}
 
-    <h5>Table with {{ table3_name|lower }}:</h5>
+    <h5>{% trans 'Table with' %} {{ table3_name|lower }}:</h5>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -63,6 +64,6 @@
     </table>
 
     <div class="text-right">
-        <a href={% url 'csv_worker:home' %}>Go back...</a>
+        <a href={% url 'csv_worker:home' %}>{% trans 'Go back...' %}</a>
     </div>
 {% endblock %}

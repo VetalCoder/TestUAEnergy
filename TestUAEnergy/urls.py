@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .proj_views import SetLangView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', TemplateView.as_view(template_name='base.html'), name='home'),
     path('', include('authorization.urls', namespace='authorization')),
     path('csv/', include('csv_worker.urls', namespace='csv_worker')),
+    path('set_language/<str:lang>/', SetLangView.as_view(), name='set_language')
 ]

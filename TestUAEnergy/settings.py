@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'TestUAEnergy.urls'
@@ -107,17 +109,19 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
+    # Password, that I need to use in task are too common. So for complete task
+    # I disable this check...
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
     {
         'NAME': 'authorization.validators.CheckPassForContainsNeededPassword',
         'OPTIONS': {
-            'username': 'test6',
-            'password': 'vetal20051996'
+            'username': 'uaenergy',
+            'password': '1qaz2wsx3edc'
         }
     },
 ]
@@ -152,3 +156,16 @@ LOGOUT_REDIRECT_URL = reverse_lazy('authorization:home')
 AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
 
 TABLE_NAME_FOR_VARIABLES = 'vars'
+
+# Translations
+LANGUAGE_SESSION_KEY = "en"
+
+LANGUAGES = (
+    ('uk', _('Ukrainian')),
+    ('en', _('English')),
+    ('ru', _('Russian')),
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locales'),
+)
